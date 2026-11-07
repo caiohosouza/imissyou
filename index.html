@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fff8f5">
+  <meta name="description" content="Ainda temos 26.298 horas para recuperar. E cada segundo ao seu lado vale a pena.">
+  <title>26.298 horas com você</title>
+  <style>
+    :root{--ink:#422e3b;--muted:#826d79;--rose:#d76583;--rose-dark:#a84162;--paper:#fffaf8;--line:#f1dfe3;--gold:#d5a75f}
+    *{box-sizing:border-box} body{margin:0;min-height:100vh;color:var(--ink);background:radial-gradient(ellipse at 8% 8%,#fce8e9 0,transparent 32%),radial-gradient(ellipse at 95% 92%,#f5e8d9 0,transparent 29%),var(--paper);font-family:Georgia,'Times New Roman',serif;overflow-x:hidden}
+    .page{width:min(100% - 32px,880px);margin:auto;padding:50px 0 34px;text-align:center;position:relative;z-index:1}.eyebrow{font:600 11px/1.4 system-ui,sans-serif;letter-spacing:.24em;text-transform:uppercase;color:var(--rose-dark)}
+    h1{font-size:clamp(43px,9vw,80px);line-height:.98;letter-spacing:-.055em;font-weight:500;margin:21px 0 14px}h1 em{font-weight:400;color:var(--rose-dark)}.intro{font-size:clamp(17px,3vw,21px);line-height:1.65;color:var(--muted);max-width:600px;margin:0 auto}
+    .heart{display:inline-block;color:var(--rose);font-size:20px;animation:beat 1.6s ease-in-out infinite}@keyframes beat{50%{transform:scale(1.23)}}
+    .counter-card{margin:36px auto 0;padding:30px clamp(15px,4vw,38px) 25px;max-width:750px;border:1px solid #efdadd;border-radius:28px;background:#ffffffc7;box-shadow:0 22px 65px #75485d12;backdrop-filter:blur(8px)}.counter-label{font:600 11px system-ui,sans-serif;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}.digits{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:17px 0 12px}.digit{padding:13px 5px 12px;border-radius:18px;background:#fff6f5;border:1px solid #f8e9e8}.number{font:500 clamp(35px,9vw,67px)/1.1 system-ui,sans-serif;letter-spacing:-.065em;color:var(--rose-dark);font-variant-numeric:tabular-nums}.unit{margin-top:7px;font:600 10px system-ui,sans-serif;text-transform:uppercase;letter-spacing:.17em;color:var(--muted)}.subline{font-size:15px;color:var(--muted);line-height:1.6}.subline strong{color:var(--ink);font-weight:600}
+    .note{margin:30px auto 0;max-width:610px;font-size:clamp(20px,4vw,27px);line-height:1.5}.note .spark{color:var(--gold)}.message-card{margin:26px auto 0;max-width:620px;min-height:160px;padding:23px 24px 20px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.message-tag{font:600 10px system-ui,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:var(--rose-dark)}#message{margin:14px 0 17px;font-size:20px;line-height:1.5;color:#624b59;transition:opacity .25s}.button{appearance:none;border:1px solid #e8c4cd;background:#fff9f8;color:var(--rose-dark);border-radius:999px;padding:11px 19px;font:600 12px system-ui,sans-serif;letter-spacing:.04em;cursor:pointer;transition:.2s}.button:hover{background:#fcebed;transform:translateY(-1px)}.button:focus-visible{outline:3px solid #d7658380;outline-offset:3px}
+    .footer{margin-top:34px;color:var(--muted);font:12px/1.8 system-ui,sans-serif}.footer span{color:var(--rose-dark)}.floating{position:fixed;inset:0;pointer-events:none;overflow:hidden}.float{position:absolute;bottom:-30px;color:#d7658350;animation:rise linear forwards}@keyframes rise{to{transform:translateY(-110vh) rotate(35deg);opacity:0}}
+    @media(max-width:500px){.page{padding-top:36px}.counter-card{margin-top:27px;border-radius:22px;padding-top:25px}.digits{gap:7px}.digit{border-radius:14px;padding:12px 3px}.unit{font-size:9px;letter-spacing:.1em}.message-card{padding-inline:12px}}
+    @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important}}
+  </style>
+</head>
+<body>
+  <div class="floating" id="floating" aria-hidden="true"></div>
+  <main class="page">
+    <div class="eyebrow">uma contagem feita de saudade e amor</div>
+    <h1>26.298 horas<br><em>com você</em></h1>
+    <p class="intro">Três anos longe. Agora, a gente tem todo esse tempo para recuperar — um abraço, uma conversa e um momento de cada vez. <span class="heart" aria-hidden="true">♥</span></p>
+    <section class="counter-card" aria-label="Tempo que falta para recuperar nossas horas">
+      <div class="counter-label">Ainda temos para recuperar</div>
+      <div class="digits" role="timer" aria-live="off">
+        <div class="digit"><div class="number" id="hours">26.298</div><div class="unit">horas</div></div>
+        <div class="digit"><div class="number" id="minutes">00</div><div class="unit">minutos</div></div>
+        <div class="digit"><div class="number" id="seconds">00</div><div class="unit">segundos</div></div>
+      </div>
+      <div class="subline">Cada segundo que passa é um segundo <strong>mais perto de matar a saudade.</strong></div>
+    </section>
+    <p class="note"><span class="spark">✦</span> O tempo voa quando estou com você.<br>Então vamos aproveitar cada minutinho. <span class="heart" aria-hidden="true">♥</span></p>
+    <section class="message-card" aria-label="Um recadinho para você">
+      <div class="message-tag">um recadinho para você</div>
+      <p id="message">Meu lugar favorito continua sendo ao seu lado.</p>
+      <button class="button" id="surprise" type="button">Quero outro recadinho ✨</button>
+    </section>
+    <footer class="footer">Feito com carinho, pensando em você <span>♥</span><br><span id="together"></span></footer>
+  </main>
+  <script>
+    // Data de retorno: 13 de outubro de 2026, considerando meia-noite em Brasília.
+    // O prazo é calculado a partir dessa data e não reinicia quando alguém abre a página.
+    const START_DATE = '2026-10-13T00:00:00-03:00';
+    const TOTAL_HOURS = 26298;
+    const start = new Date(START_DATE);
+    const deadline = new Date(start.getTime() + TOTAL_HOURS * 60 * 60 * 1000);
+    const $ = id => document.getElementById(id);
+    const pad = n => String(n).padStart(2,'0');
+    function update(){
+      let left = Math.max(0, deadline.getTime() - Date.now());
+      const totalSeconds = Math.floor(left / 1000);
+      const hours = Math.floor(totalSeconds / 3600);
+      const minutes = Math.floor((totalSeconds % 3600) / 60);
+      const seconds = totalSeconds % 60;
+      $('hours').textContent = hours.toLocaleString('pt-BR');
+      $('minutes').textContent = pad(minutes);
+      $('seconds').textContent = pad(seconds);
+      const elapsedDays = Math.max(0, Math.floor((Date.now() - start.getTime()) / 86400000));
+      $('together').textContent = elapsedDays === 0 ? 'O primeiro dia de muitos.' : `${elapsedDays} ${elapsedDays === 1 ? 'dia' : 'dias'} escrevendo uma nova história juntos.`;
+    }
+    update(); setInterval(update, 1000);
+    const notes = [
+      'Meu lugar favorito continua sendo ao seu lado.',
+      'A saudade teve três anos. Agora temos o resto do caminho.',
+      'Se o tempo voa com você, que a gente voe bem juntinho.',
+      'Eu escolheria você de novo. E de novo. E de novo.',
+      'Que sorte a minha poder chamar você de meu amor.',
+      'A melhor parte do meu dia é qualquer parte com você.',
+      'A gente ainda tem tanta história bonita para viver.',
+      'Depois de tanta saudade, até os dias comuns com você parecem especiais.',
+      'Meu coração reconheceu o caminho de volta para você.',
+      'Não quero recuperar o tempo perdido: quero criar um monte de lembranças novas com você.',
+      'Com você, até ficar sem fazer nada vira meu programa favorito.',
+      'Que a gente nunca se acostume com a sorte que é ter um ao outro.',
+      'Você continua sendo meu sorriso mais fácil.',
+      'Quero muitos cafés, conversas e abraços sem olhar para o relógio.',
+      'Nosso reencontro é uma das partes mais bonitas da nossa história.',
+      'Eu gosto da vida muito mais quando ela é vivida pertinho de você.',
+      'Se depender de mim, ainda vamos colecionar muitos momentos felizes.',
+      'Três anos de saudade não apagam uma vida inteira de carinho.',
+      'Prometo aproveitar cada pedacinho do nosso tempo juntos.',
+      'Meu plano favorito para hoje, amanhã e depois: você.',
+      'Que bom que a vida encontrou um jeito de trazer a gente de volta.',
+      'Não existe atraso que a gente não possa transformar em abraço.'
+    ];
+    let last = 0;
+    $('surprise').addEventListener('click', () => {
+      let next; do { next = Math.floor(Math.random() * notes.length); } while (next === last);
+      last = next; const el = $('message'); el.style.opacity = 0;
+      setTimeout(() => { el.textContent = notes[next]; el.style.opacity = 1; }, 180);
+      for(let i=0;i<7;i++) setTimeout(()=>heart(),i*75);
+    });
+    function heart(){
+      const el=document.createElement('span'); el.className='float'; el.textContent=Math.random()>.35?'♥':'✦';
+      el.style.left=(Math.random()*100)+'vw'; el.style.fontSize=(12+Math.random()*17)+'px';
+      el.style.animationDuration=(4+Math.random()*3)+'s'; $('floating').appendChild(el);
+      setTimeout(()=>el.remove(),7500);
+    }
+  </script>
+</body>
+</html>
